@@ -1,12 +1,20 @@
-Package: rsf
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Package: rsf
+Title: Report of Statistical Findings in bookdown
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Derek",
+           family = "Chiu",
+           role = c("aut", "cre"),
+           email = "dchiu@bccrc.ca")
+Description: A report of statistical findings (RSF) project
+    template is generated using a bookdown format. YAML files can be
+    further customized. Additional helper functions provide extra features to 
+    the RSF.
+License: MIT + file LICENSE
+URL: https://github.com/dchiu911/rsf
+BugReports: https://github.com/dchiu911/rsf/issues
 Encoding: UTF-8
 LazyData: true
+Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
