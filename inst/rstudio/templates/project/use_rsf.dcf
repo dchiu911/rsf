@@ -1,3 +1,9 @@
 Binding: use_rsf
 Title: Report of Statistical Findings using bookdown
 OpenFiles: _bookdown.yml, _output.yml, index.Rmd
+
+Parameter: output_dir
+Widget: TextInput
+Label: Output Directory
+Default: reports
+Position: left
