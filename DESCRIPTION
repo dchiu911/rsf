@@ -9,11 +9,14 @@ Authors@R:
            email = "dchiu@bccrc.ca")
 Description: A report of statistical findings (RSF) project
     template is generated using a bookdown format. YAML files can be
-    further customized. Additional helper functions provide extra features to 
-    the RSF.
+    further customized. Additional helper functions provide extra features
+    to the RSF.
 License: MIT + file LICENSE
 URL: https://github.com/dchiu911/rsf
 BugReports: https://github.com/dchiu911/rsf/issues
+Imports: 
+    whoami,
+    yaml
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
