@@ -13,7 +13,7 @@ use_references <- function(number = 99) {
   # Add header and generate packages.bib
   header <- "`r if (knitr::is_html_output()) '# References {-}'`"
   chunk_start <- "\n```{r include=FALSE}"
-  pkg_list <- "knitr::write_bib(.packages(), 'packages.bib')"
+  pkg_list <- "knitr::write_bib(c(.packages(), 'bookdown'), 'packages.bib')"
   chunk_end <- "```"
   writeLines(
     text = c(header, chunk_start, pkg_list, chunk_end),
