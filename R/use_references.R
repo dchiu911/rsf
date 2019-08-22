@@ -21,11 +21,9 @@ use_references <- function(number = 99) {
   chunk_start <- "\n```{r include=FALSE}"
   pkg_list <- "knitr::write_bib(c(.packages(), 'bookdown'), 'packages.bib')"
   chunk_end <- "```"
-  writeLines(
-    text = c(header, chunk_start, pkg_list, chunk_end),
-    con = file.path(src_path, rmd_name)
-  )
-  usethis::ui_done(paste(usethis::ui_path(file.path(src_path, rmd_name)), "added"))
+  rmd_path <- file.path(src_path, rmd_name)
+  writeLines(text = c(header, chunk_start, pkg_list, chunk_end), con = rmd_path)
+  usethis::ui_done(paste(usethis::ui_path(rmd_path), "added"))
 
   # Call packages.bib from index.Rmd
   index_rmd <- readLines(here::here("index.Rmd"))
@@ -44,8 +42,8 @@ use_references <- function(number = 99) {
 
   # Rename Bibliography to References in tex
   preamble_tex <- readLines(here::here("preamble.tex"))
-  bib_rename <- "\n\\renewcommand{\\bibname}{References}
-% https://tex.stackexchange.com/questions/12597/renaming-the-bibliography-page-using-bibtex"
-  writeLines(text = c(preamble_tex, bib_rename), con = here::here("preamble.tex"))
+  bib_rename <- "\n\\renewcommand{\\bibname}{References}"
+  writeLines(text = c(preamble_tex, bib_rename),
+             con = here::here("preamble.tex"))
   usethis::ui_done(paste(usethis::ui_path("preamble.tex"), "modified"))
 }

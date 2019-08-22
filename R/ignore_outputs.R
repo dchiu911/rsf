@@ -9,7 +9,8 @@ git_ignore_outputs <- function(figs_only = TRUE) {
   bookdown_yml <- yaml::read_yaml(here::here("_bookdown.yml"))
   output_dir <- bookdown_yml[["output_dir"]]
   if (figs_only) {
-    output_dir <- file.path(output_dir, paste0(bookdown_yml[["book_filename"]], "_files"))
+    output_dir <-
+      file.path(output_dir, paste0(bookdown_yml[["book_filename"]], "_files"))
   }
   outputs <- c(output_dir, "_bookdown_files")
   if (all(outputs %in% git_ignore)) {
