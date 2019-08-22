@@ -4,6 +4,10 @@
 #'
 #' @param number number prepended to references Rmd source file.
 #' @export
+#' @examples
+#' \dontrun{
+#' use_references(number = 4)
+#' }
 use_references <- function(number = 99) {
   # Check if references already exists
   if ("bibliography" %in% names(yaml::read_yaml(here::here("index.Rmd")))) {

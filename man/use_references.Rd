@@ -12,3 +12,8 @@ use_references(number = 99)
 \description{
 Add a References section at the end of the RSF.
 }
+\examples{
+\dontrun{
+use_references(number = 4)
+}
+}

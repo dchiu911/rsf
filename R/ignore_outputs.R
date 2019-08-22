@@ -4,6 +4,10 @@
 #'
 #' @param figs_only logical; if `TRUE` (default), only figures are git ignored
 #' @export
+#' @examples
+#' \dontrun{
+#' git_ignore_outputs(figs_only = FALSE)
+#' }
 git_ignore_outputs <- function(figs_only = TRUE) {
   git_ignore <- readLines(here::here(".gitignore"))
   bookdown_yml <- yaml::read_yaml(here::here("_bookdown.yml"))

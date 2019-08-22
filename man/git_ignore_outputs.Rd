@@ -12,3 +12,8 @@ git_ignore_outputs(figs_only = TRUE)
 \description{
 Add generated reports, figures, and HTML libraries to .gitignore
 }
+\examples{
+\dontrun{
+git_ignore_outputs(figs_only = FALSE)
+}
+}

@@ -9,6 +9,8 @@
 #' @param path project path
 #' @param ... additional project parameters
 #' @export
+#' @examples
+#' use_rsf(".")
 use_rsf <- function(path, ...) {
   dir.create(path, recursive = TRUE, showWarnings = FALSE)
   params <- list(...)
