@@ -6,6 +6,8 @@ write_index <- function(path) {
     date = "`r Sys.Date()`",
     site = "bookdown::bookdown_site",
     documentclass = "report",
+    `biblio-style` = "apalike",
+    `link-citations` = TRUE,
     colorlinks = TRUE,
     lot = TRUE,
     lof = TRUE
