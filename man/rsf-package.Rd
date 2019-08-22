@@ -4,7 +4,7 @@
 \name{rsf-package}
 \alias{rsf}
 \alias{rsf-package}
-\title{rsf: Report of Statistical Findings in bookdown}
+\title{rsf: Report of Statistical Findings in Bookdown}
 \description{
 A report of statistical findings (RSF) project
     template is generated using a bookdown format. YAML fields can be

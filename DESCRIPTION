@@ -1,6 +1,6 @@
 Type: Package
 Package: rsf
-Title: Report of Statistical Findings in bookdown
+Title: Report of Statistical Findings in Bookdown
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Derek",
