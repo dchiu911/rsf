@@ -18,6 +18,7 @@ Imports:
     bookdown,
     here,
     stringr,
+    usethis,
     whoami,
     yaml
 Encoding: UTF-8
