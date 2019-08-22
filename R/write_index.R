@@ -2,7 +2,7 @@
 write_index <- function(path) {
   index_yml <- list(
     title = paste(basename(path), "Report of Statistical Findings", sep = ": "),
-    author = whoami::fullname(),
+    author = whoami::fullname(fallback = "Author"),
     date = "`r Sys.Date()`",
     site = "bookdown::bookdown_site",
     documentclass = "report",
