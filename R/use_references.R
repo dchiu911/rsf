@@ -21,9 +21,21 @@ use_references <- function(number = 99) {
   )
 
   # Call packages.bib from index.Rmd
-  index_rmd_curr <- readLines(here::here("index.Rmd"))
-  bib_style <- grep("biblio-style", index_rmd_curr)
-  index_rmd_new <-
-    append(index_rmd_curr, "bibliography: packages.bib", bib_style - 1)
-  writeLines(text = index_rmd_new, con = here::here("index.Rmd"))
+  index_rmd <- readLines(here::here("index.Rmd"))
+  before_style <- grep("biblio-style", index_rmd) - 1
+  index_rmd <- append(index_rmd, "bibliography: packages.bib", before_style)
+  writeLines(text = index_rmd, con = here::here("index.Rmd"))
+
+  # Add bib options to bookdown::pdf_book output
+  output_yml <- yaml::read_yaml(here::here("_output.yml"))
+  bib_opts <- list(citation_package = "natbib", toc_bib = TRUE)
+  output_yml[["bookdown::pdf_book"]] <-
+    c(output_yml[["bookdown::pdf_book"]], bib_opts)
+  yaml::write_yaml(x = output_yml, file = here::here("_output.yml"))
+
+  # Rename Bibliography to References in tex
+  preamble_tex <- readLines(here::here("preamble.tex"))
+  bib_rename <- "\n\\renewcommand{\\bibname}{References}
+% https://tex.stackexchange.com/questions/12597/renaming-the-bibliography-page-using-bibtex"
+  writeLines(text = c(preamble_tex, bib_rename), con = here::here("preamble.tex"))
 }
