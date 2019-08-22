@@ -8,7 +8,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "dchiu@bccrc.ca")
 Description: A report of statistical findings (RSF) project
-    template is generated using a bookdown format. YAML files can be
+    template is generated using a bookdown format. YAML fields can be
     further customized. Additional helper functions provide extra features
     to the RSF.
 License: MIT + file LICENSE
