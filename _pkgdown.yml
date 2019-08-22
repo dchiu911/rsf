@@ -2,4 +2,14 @@ template:
   params:
     bootswatch: cerulean
 
-destination: docs
+navbar:
+  title: ~
+  type: default
+  left:
+  - text: Reference
+    href: reference/index.html
+  - text: News
+    href: news/index.html
+  right:
+  - icon: fa-github
+    href: https://github.com/dchiu911/rsf
