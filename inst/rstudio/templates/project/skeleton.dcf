@@ -1,5 +1,6 @@
 Binding: use_rsf
 Title: Report of Statistical Findings using bookdown
+Icon: rsf-logo.png
 OpenFiles: _bookdown.yml, _output.yml, index.Rmd
 
 Parameter: output_dir
