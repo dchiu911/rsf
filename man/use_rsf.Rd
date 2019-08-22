@@ -19,6 +19,3 @@ not interactively.
 This function is called when the user selects File > New Project > New
 Directory > Report of Statistical Findings using bookdown.
 }
-\examples{
-use_rsf(".")
-}
