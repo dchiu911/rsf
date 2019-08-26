@@ -13,7 +13,8 @@ git_ignore_outputs(figs_only = TRUE)
 Add generated reports, figures, and HTML libraries to .gitignore
 }
 \examples{
-\dontrun{
+\donttest{
+setwd(tempdir())
 git_ignore_outputs(figs_only = FALSE)
 }
 }

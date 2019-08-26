@@ -13,7 +13,8 @@ use_references(number = 99)
 Add a References section at the end of the RSF.
 }
 \examples{
-\dontrun{
+\donttest{
+setwd(tempdir())
 use_references(number = 4)
 }
 }
