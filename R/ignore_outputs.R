@@ -6,6 +6,7 @@
 #' @export
 #' @examples
 #' \donttest{
+#' setwd(tempdir())
 #' git_ignore_outputs(figs_only = FALSE)
 #' }
 git_ignore_outputs <- function(figs_only = TRUE) {

@@ -6,6 +6,7 @@
 #' @export
 #' @examples
 #' \donttest{
+#' setwd(tempdir())
 #' use_references(number = 4)
 #' }
 use_references <- function(number = 99) {
