@@ -1,3 +1,10 @@
+## Resubmission
+
+This is a resubmission. In this version I have:
+
+* Replaced dontrun{} with donttest{} in examples
+* Written to tempdir() in examples
+
 ## Test environments
 * local OS X install, R 3.5.1
 * ubuntu 14.04 (on travis-ci), R 3.5.1
