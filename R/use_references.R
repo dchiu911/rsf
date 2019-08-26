@@ -5,7 +5,7 @@
 #' @param number number prepended to references Rmd source file.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' use_references(number = 4)
 #' }
 use_references <- function(number = 99) {
