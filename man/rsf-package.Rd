@@ -7,7 +7,7 @@
 \title{rsf: Report of Statistical Findings in Bookdown}
 \description{
 A report of statistical findings (RSF) project
-    template is generated using a bookdown format. YAML fields can be
+    template is generated using a bookdown format. 'YAML' fields can be
     further customized. Additional helper functions provide extra features
     to the RSF.
 }
