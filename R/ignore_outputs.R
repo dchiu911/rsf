@@ -12,6 +12,11 @@
 #' setwd(savedir)
 #' }
 git_ignore_outputs <- function(figs_only = TRUE) {
+  # Check if input files exist
+  if (!all(file.exists(here::here(".gitignore", "_bookdown.yml")))) {
+    stop("One or more input files are missing.")
+  }
+
   git_ignore <- readLines(here::here(".gitignore"))
   bookdown_yml <- yaml::read_yaml(here::here("_bookdown.yml"))
   output_dir <- bookdown_yml[["output_dir"]]

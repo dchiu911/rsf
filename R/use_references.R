@@ -12,6 +12,11 @@
 #' setwd(savedir)
 #' }
 use_references <- function(number = 99) {
+  # Check if input files exist
+  if (!all(file.exists(here::here("index.Rmd", "_output.yml", "preamble.tex")))) {
+    stop("One or more input files are missing.")
+  }
+
   # Check if references already exists
   if ("bibliography" %in% names(yaml::read_yaml(here::here("index.Rmd")))) {
     usethis::ui_done("References already added")
