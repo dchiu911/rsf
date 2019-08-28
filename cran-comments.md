@@ -5,7 +5,7 @@ This is a resubmission. In this version I have:
 * Improved documentation for use_rsf()
 * Ensured examples are executable by adding conditional checks
 * Reset the working directory at the end of examples
-* Wrapped 'YAML' in Description
+* Wrapped 'bookdown' and 'YAML' in Description
 * Replaced dontrun{} with donttest{} in examples
 * Written to tempdir() in examples
 
