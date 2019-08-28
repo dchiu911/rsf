@@ -9,7 +9,9 @@ use_rsf(path, ...)
 \arguments{
 \item{path}{project path}
 
-\item{...}{additional project parameters}
+\item{...}{additional configurations for \code{_bookdown.yml} as described in
+\url{https://bookdown.org/yihui/bookdown/configuration.html}. Currently, only
+\code{output_dir} is supported.}
 }
 \description{
 Opens a new R project using the RSF template. Intended for use in RStudio,
@@ -17,5 +19,6 @@ not interactively.
 }
 \details{
 This function is called when the user selects File > New Project > New
-Directory > Report of Statistical Findings using bookdown.
+Directory > Report of Statistical Findings using bookdown. The directory name
+and output directory can be specified.
 }

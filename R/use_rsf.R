@@ -4,10 +4,13 @@
 #' not interactively.
 #'
 #' This function is called when the user selects File > New Project > New
-#' Directory > Report of Statistical Findings using bookdown.
+#' Directory > Report of Statistical Findings using bookdown. The directory name
+#' and output directory can be specified.
 #'
 #' @param path project path
-#' @param ... additional project parameters
+#' @param ... additional configurations for `_bookdown.yml` as described in
+#'   <https://bookdown.org/yihui/bookdown/configuration.html>. Currently, only
+#'   `output_dir` is supported.
 #' @export
 use_rsf <- function(path, ...) {
   dir.create(path, recursive = TRUE, showWarnings = FALSE)
