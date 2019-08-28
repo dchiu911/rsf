@@ -6,8 +6,10 @@
 #' @export
 #' @examples
 #' \donttest{
-#' setwd(tempdir())
+#' wd <- tempdir()
+#' savedir <- setwd(wd)
 #' use_references(number = 4)
+#' setwd(savedir)
 #' }
 use_references <- function(number = 99) {
   # Check if references already exists

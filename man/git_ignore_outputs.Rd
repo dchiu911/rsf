@@ -14,7 +14,9 @@ Add generated reports, figures, and HTML libraries to .gitignore
 }
 \examples{
 \donttest{
-setwd(tempdir())
+wd <- tempdir()
+savedir <- setwd(wd)
 git_ignore_outputs(figs_only = FALSE)
+setwd(savedir)
 }
 }

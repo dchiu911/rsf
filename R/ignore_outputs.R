@@ -6,8 +6,10 @@
 #' @export
 #' @examples
 #' \donttest{
-#' setwd(tempdir())
+#' wd <- tempdir()
+#' savedir <- setwd(wd)
 #' git_ignore_outputs(figs_only = FALSE)
+#' setwd(savedir)
 #' }
 git_ignore_outputs <- function(figs_only = TRUE) {
   git_ignore <- readLines(here::here(".gitignore"))

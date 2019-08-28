@@ -14,7 +14,9 @@ Add a References section at the end of the RSF.
 }
 \examples{
 \donttest{
-setwd(tempdir())
+wd <- tempdir()
+savedir <- setwd(wd)
 use_references(number = 4)
+setwd(savedir)
 }
 }
