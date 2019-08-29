@@ -1,0 +1,4 @@
+book_filename: RSF
+output_dir: reports
+rmd_subdir: src
+before_chapter_script: src/utils.R
