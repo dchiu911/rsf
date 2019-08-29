@@ -2,23 +2,29 @@
 #'
 #' Add generated reports, figures, and HTML libraries to .gitignore
 #'
-#' @param figs_only logical; if `TRUE` (default), only figures are git ignored
+#' @param path path of the directory containing the input files `.gitignore` and
+#'   `_bookdown.yml`.
+#' @param figs_only logical; if `TRUE` (default), only figures are git ignored.
 #' @export
 #' @examples
 #' \donttest{
 #' wd <- tempdir()
 #' savedir <- setwd(wd)
+#' file.copy(list.files(system.file("extdata", package = "rsf"),
+#'                      full.names = TRUE, all.files = TRUE, no.. = TRUE), ".")
 #' git_ignore_outputs(figs_only = FALSE)
 #' setwd(savedir)
 #' }
-git_ignore_outputs <- function(figs_only = TRUE) {
+git_ignore_outputs <- function(path = ".", figs_only = TRUE) {
   # Check if input files exist
-  if (!all(file.exists(here::here(".gitignore", "_bookdown.yml")))) {
+  git_ignore_path <- file.path(path, ".gitignore")
+  bookdown_yml_path <- file.path(path, "_bookdown.yml")
+  if (!all(file.exists(c(git_ignore_path, bookdown_yml_path)))) {
     stop("One or more input files are missing.")
   }
 
-  git_ignore <- readLines(here::here(".gitignore"))
-  bookdown_yml <- yaml::read_yaml(here::here("_bookdown.yml"))
+  git_ignore <- readLines(git_ignore_path)
+  bookdown_yml <- yaml::read_yaml(bookdown_yml_path)
   output_dir <- bookdown_yml[["output_dir"]]
   if (figs_only) {
     output_dir <-
@@ -29,5 +35,11 @@ git_ignore_outputs <- function(figs_only = TRUE) {
     usethis::ui_done("Outputs already git ignored")
     return(invisible())
   }
-  usethis::use_git_ignore(outputs)
+  writeLines(text = c(git_ignore, outputs), con = git_ignore_path)
+  usethis::ui_done(paste(
+    "Adding",
+    usethis::ui_value(outputs),
+    "to",
+    usethis::ui_path(".gitignore")
+  ))
 }

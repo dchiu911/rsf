@@ -4,9 +4,12 @@
 \alias{use_references}
 \title{Use references}
 \usage{
-use_references(number = 99)
+use_references(path = ".", number = 99)
 }
 \arguments{
+\item{path}{path of the directory containing the input files \code{index.Rmd},
+\code{_output.yml}, \code{preamble.tex}.}
+
 \item{number}{number prepended to references Rmd source file.}
 }
 \description{
@@ -16,6 +19,8 @@ Add a References section at the end of the RSF.
 \donttest{
 wd <- tempdir()
 savedir <- setwd(wd)
+file.copy(list.files(system.file("extdata", package = "rsf"),
+                     full.names = TRUE), ".")
 use_references(number = 4)
 setwd(savedir)
 }

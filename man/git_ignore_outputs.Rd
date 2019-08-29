@@ -4,10 +4,13 @@
 \alias{git_ignore_outputs}
 \title{Git ignore generated outputs}
 \usage{
-git_ignore_outputs(figs_only = TRUE)
+git_ignore_outputs(path = ".", figs_only = TRUE)
 }
 \arguments{
-\item{figs_only}{logical; if \code{TRUE} (default), only figures are git ignored}
+\item{path}{path of the directory containing the input files \code{.gitignore} and
+\code{_bookdown.yml}.}
+
+\item{figs_only}{logical; if \code{TRUE} (default), only figures are git ignored.}
 }
 \description{
 Add generated reports, figures, and HTML libraries to .gitignore
@@ -16,6 +19,8 @@ Add generated reports, figures, and HTML libraries to .gitignore
 \donttest{
 wd <- tempdir()
 savedir <- setwd(wd)
+file.copy(list.files(system.file("extdata", package = "rsf"),
+                     full.names = TRUE, all.files = TRUE, no.. = TRUE), ".")
 git_ignore_outputs(figs_only = FALSE)
 setwd(savedir)
 }
