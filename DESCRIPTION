@@ -17,7 +17,6 @@ URL: https://github.com/dchiu911/rsf,
 BugReports: https://github.com/dchiu911/rsf/issues
 Imports: 
     bookdown,
-    here,
     stringr,
     usethis,
     whoami,
