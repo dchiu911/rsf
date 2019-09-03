@@ -12,6 +12,7 @@
 #' savedir <- setwd(wd)
 #' file.copy(list.files(system.file("extdata", package = "rsf"),
 #'                      full.names = TRUE, all.files = TRUE, no.. = TRUE), ".")
+#' file.rename("gitignore", ".gitignore")
 #' git_ignore_outputs(figs_only = FALSE)
 #' setwd(savedir)
 #' }
