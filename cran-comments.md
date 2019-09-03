@@ -2,6 +2,7 @@
 
 This is a resubmission. In this version I have:
 
+* Renamed installed file '.gitignore to 'gitignore' so it can be found in examples
 * Removed package 'here' from Imports
 * Used files from inst/extdata for examples
 * Improved documentation for use_rsf()
@@ -12,8 +13,8 @@ This is a resubmission. In this version I have:
 * Written to tempdir() in examples
 
 ## Test environments
-* local OS X install, R 3.5.1
-* ubuntu 14.04 (on travis-ci), R 3.5.1
+* local OS X install, R 3.5.3
+* ubuntu 14.04 (on travis-ci), R 3.5.3
 * win-builder (devel and release)
 
 ## R CMD check results
