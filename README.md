@@ -9,6 +9,8 @@
 status](https://travis-ci.org/dchiu911/rsf.svg?branch=master)](https://travis-ci.org/dchiu911/rsf)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/dchiu911/rsf?branch=master&svg=true)](https://ci.appveyor.com/project/dchiu911/rsf)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/rsf)](https://CRAN.R-project.org/package=rsf)
 <!-- badges: end -->
 
 The goal of rsf is to provide an RStudio project template for a Report
