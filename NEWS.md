@@ -1,4 +1,4 @@
-# rsf (development version)
+# rsf 0.1.0.9001
 
 ## LaTeX changes
 
