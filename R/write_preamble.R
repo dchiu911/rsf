@@ -1,16 +1,7 @@
 # preamble.tex
 write_preamble <- function(path) {
   cmds <-
-    "\\usepackage{booktabs}
-\\usepackage{pdflscape}
-\\newcommand{\\blandscape}{\\begin{landscape}}
-\\newcommand{\\elandscape}{\\end{landscape}}
-\\usepackage{float}
-\\floatplacement{figure}{H}
-\\floatstyle{ruled}
-\\restylefloat{figure}
-
-\\let\\paragraph\\oldparagraph
+    "\\let\\paragraph\\oldparagraph
 \\let\\subparagraph\\oldsubparagraph
 
 \\usepackage{titlesec, blindtext, color}
@@ -25,7 +16,9 @@ write_preamble <- function(path) {
   {\\Huge\\bfseries}
   {}
   {0pt}
-  {}"
+  {}
+
+\\titlespacing*{\\chapter}{0pt}{0pt}{40pt}"
 
   writeLines(cmds, file.path(path, "preamble.tex"))
 }
