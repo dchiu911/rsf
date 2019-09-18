@@ -16,7 +16,9 @@ write_preamble <- function(path) {
   {\\Huge\\bfseries}
   {}
   {0pt}
-  {}"
+  {}
+
+\\titlespacing*{\\chapter}{0pt}{0pt}{40pt}"
 
   writeLines(cmds, file.path(path, "preamble.tex"))
 }
