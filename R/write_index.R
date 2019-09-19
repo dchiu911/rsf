@@ -16,5 +16,6 @@ write_index <- function(path) {
     ) %>%
     ymlthis::yml_citations(link_citations = TRUE)
   ymlthis::use_rmarkdown(index_yml, file.path(path, "index.Rmd"),
-                         body = "\n# Preface {-}")
+                         body = "\n# Preface {-}",
+                         quiet = TRUE)
 }

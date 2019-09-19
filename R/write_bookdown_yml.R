@@ -9,5 +9,5 @@ write_bookdown_yml <- function(path, params) {
     rmd_subdir = "src",
     !!!params
   )
-  ymlthis::use_bookdown_yml(bookdown_yml, path)
+  ymlthis::use_bookdown_yml(bookdown_yml, path, quiet = TRUE)
 }
