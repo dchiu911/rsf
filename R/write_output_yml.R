@@ -13,8 +13,8 @@ write_output_yml <- function(path) {
     )
   )
   # TODO: quiet arg not passed
-  tmp <- capture.output(ymlthis::use_output_yml(output_yml, path, quiet = TRUE))
+  tmp <- utils::capture.output(ymlthis::use_output_yml(output_yml, path, quiet = TRUE))
   # TODO: extra final line return
   tmp_path <- gsub(".*'(.*)'.*", "\\1", tmp)
-  writeLines(head(readLines(tmp_path), -1), tmp_path)
+  writeLines(utils::head(readLines(tmp_path), -1), tmp_path)
 }
