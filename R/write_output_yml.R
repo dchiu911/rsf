@@ -12,5 +12,5 @@ write_output_yml <- function(path) {
       includes = ymlthis::includes2(in_header = "preamble.tex")
     )
   )
-  ymlthis::use_output_yml(output_yml, path, quiet = TRUE)
+  tmp <- capture.output(ymlthis::use_output_yml(output_yml, path, quiet = TRUE))  # TODO: quiet arg not passed
 }
