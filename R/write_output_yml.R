@@ -1,19 +1,16 @@
-# _output.yml
+#' Write `_output.yml`
+#' @noRd
 write_output_yml <- function(path) {
-  output_yml <- list(
-    `bookdown::gitbook` = list(
+  output_yml <- ymlthis::yml_output(
+    .yml = ymlthis::yml_empty(),
+    bookdown::gitbook(
       lib_dir = "assets",
       split_by = "chapter+number"
     ),
-    `bookdown::pdf_book` = list(
+    bookdown::pdf_book(
       keep_tex = TRUE,
-      includes = list(
-        in_header = "preamble.tex"
-      )
+      includes = ymlthis::includes2(in_header = "preamble.tex")
     )
   )
-  yaml::write_yaml(
-    x = output_yml,
-    file = file.path(path, "_output.yml")
-  )
+  ymlthis::use_output_yml(output_yml, path)
 }
