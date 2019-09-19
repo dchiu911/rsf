@@ -1,5 +1,9 @@
 # rsf 0.1.0.9001
 
+## API changes
+
+* Use the `ymlthis` package for writing YAML
+
 ## LaTeX changes
 
 * Decrease space before chapter header
