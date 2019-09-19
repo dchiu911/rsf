@@ -20,7 +20,8 @@ Imports:
     stringr,
     usethis,
     whoami,
-    yaml
+    yaml,
+    magrittr
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
