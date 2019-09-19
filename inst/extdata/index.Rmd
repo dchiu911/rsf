@@ -1,14 +1,15 @@
 ---
 title: 'Report of Statistical Findings'
 author: Derek Chiu
-date: '`r Sys.Date()`'
+date: '`r format(Sys.Date())`'
 site: bookdown::bookdown_site
 documentclass: report
+geometry: margin=1in
+colorlinks: true
+lof: true
+lot: true
 biblio-style: apalike
-link-citations: yes
-colorlinks: yes
-lot: yes
-lof: yes
+link-citations: true
 ---
 
 # Preface {-}

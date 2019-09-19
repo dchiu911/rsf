@@ -2,6 +2,6 @@ bookdown::gitbook:
   lib_dir: assets
   split_by: chapter+number
 bookdown::pdf_book:
-  keep_tex: yes
+  keep_tex: true
   includes:
     in_header: preamble.tex
