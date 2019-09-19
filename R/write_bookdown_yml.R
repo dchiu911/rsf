@@ -9,5 +9,9 @@ write_bookdown_yml <- function(path, params) {
     rmd_subdir = "src",
     !!!params
   )
-  tmp <- capture.output(ymlthis::use_bookdown_yml(bookdown_yml, path, quiet = TRUE))  # TODO: quiet arg not passed
+  # TODO: quiet arg not passed
+  tmp <- capture.output(ymlthis::use_bookdown_yml(bookdown_yml, path, quiet = TRUE))
+  # TODO: extra final line return
+  tmp_path <- gsub(".*'(.*)'.*", "\\1", tmp)
+  writeLines(head(readLines(tmp_path), -1), tmp_path)
 }
