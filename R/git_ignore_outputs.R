@@ -31,10 +31,6 @@ git_ignore_outputs <- function(path = ".", figs_only = TRUE) {
     output_dir <-
       file.path(output_dir, paste0(bookdown_yml[["book_filename"]], "_files"))
   }
-  outputs <- c(output_dir, "_bookdown_files")
-  if (all(outputs %in% git_ignore)) {
-    usethis::ui_done(paste(usethis::ui_value(outputs), "already git ignored"))
-    return(invisible())
-  }
-  usethis::write_union(path = git_ignore_path, lines = c(git_ignore, outputs))
+  usethis::write_union(path = git_ignore_path,
+                       lines = c(git_ignore, output_dir, "_bookdown_files"))
 }
