@@ -34,6 +34,7 @@ use_references <- function(path = ".", number = 99) {
   src_path <- file.path(path, "src")
   if (!dir.exists(src_path)) dir.create(src_path)
   rmd_name <- paste0(sprintf("%02d", number), "-references.Rmd")
+  ref_rmd_path <- file.path(src_path, rmd_name)
 
   # Add header and generate packages.bib
   header <- "`r if (knitr::is_html_output()) '# References {-}'`"
@@ -41,8 +42,8 @@ use_references <- function(path = ".", number = 99) {
     chunk_code = knitr::write_bib(c(.packages(), "bookdown"), "packages.bib"),
     chunk_args = list(include = FALSE)
   )
-  writeLines(text = c(header, "", chunk), con = file.path(src_path, rmd_name))
-  usethis::ui_done(paste("Writing", usethis::ui_path(file.path(src_path, rmd_name))))
+  writeLines(text = c(header, "", chunk), con = ref_rmd_path)
+  usethis::ui_done(paste("Writing", usethis::ui_path(ref_rmd_path)))
 
   # Call packages.bib from index.Rmd
   index_rmd <- readLines(index_rmd_path)
