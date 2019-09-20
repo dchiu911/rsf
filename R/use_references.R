@@ -25,7 +25,7 @@ use_references <- function(path = ".", number = 99) {
   }
 
   # Check if references already exists
-  if ("bibliography" %in% names(yaml::read_yaml(index_rmd_path))) {
+  if (ymlthis::has_field(yaml::read_yaml(index_rmd_path), "bibliography")) {
     usethis::ui_done("References already added")
     return(invisible())
   }
@@ -37,20 +37,20 @@ use_references <- function(path = ".", number = 99) {
   write_rmd(src_path, "References", rmd_name)
 
   # Add header and generate packages.bib
-  header <- "`r if (knitr::is_html_output()) '# References {-}'`\n"
-  chunk_start <- "```{r include=FALSE}"
-  pkg_list <- "knitr::write_bib(c(.packages(), 'bookdown'), 'packages.bib')"
-  chunk_end <- "```"
-  rmd_path <- file.path(src_path, rmd_name)
-  writeLines(text = c(header, chunk_start, pkg_list, chunk_end), con = rmd_path)
-  usethis::ui_done(paste(usethis::ui_path(rmd_path), "added"))
+  header <- "`r if (knitr::is_html_output()) '# References {-}'`"
+  chunk <- ymlthis::code_chunk(
+    chunk_code = knitr::write_bib(c(.packages(), "bookdown"), "packages.bib"),
+    chunk_args = list(include = FALSE)
+  )
+  writeLines(text = c(header, "", chunk), con = file.path(src_path, rmd_name))
+  usethis::ui_done(paste("Writing", usethis::ui_path(file.path(src_path, rmd_name))))
 
   # Call packages.bib from index.Rmd
   index_rmd <- readLines(index_rmd_path)
   before_style <- grep("biblio-style", index_rmd) - 1
   index_rmd <- append(index_rmd, "bibliography: packages.bib", before_style)
   writeLines(text = index_rmd, con = index_rmd_path)
-  usethis::ui_done(paste(usethis::ui_path(index_rmd_path), "modified"))
+  usethis::ui_done(paste("Writing", usethis::ui_path(index_rmd_path)))
 
   # Add bib options to bookdown::pdf_book output
   output_yml <- yaml::read_yaml(output_yml_path)
@@ -58,11 +58,11 @@ use_references <- function(path = ".", number = 99) {
   output_yml[["bookdown::pdf_book"]] <-
     c(output_yml[["bookdown::pdf_book"]], bib_opts)
   yaml::write_yaml(x = output_yml, file = output_yml_path)
-  usethis::ui_done(paste(usethis::ui_path(output_yml_path), "modified"))
+  usethis::ui_done(paste("Writing", usethis::ui_path(output_yml_path)))
 
   # Rename Bibliography to References in tex
   preamble_tex <- readLines(preamble_tex_path)
-  bib_rename <- "\n\\renewcommand{\\bibname}{References}"
-  writeLines(text = c(preamble_tex, bib_rename), con = preamble_tex_path)
-  usethis::ui_done(paste(usethis::ui_path(preamble_tex_path), "modified"))
+  bib_rename <- "\\renewcommand{\\bibname}{References}"
+  writeLines(text = c(preamble_tex, "", bib_rename), con = preamble_tex_path)
+  usethis::ui_done(paste("Writing", usethis::ui_path(preamble_tex_path)))
 }
