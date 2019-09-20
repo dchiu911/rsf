@@ -33,7 +33,7 @@ use_references <- function(path = ".", number = 99) {
   # Create references Rmd source file
   src_path <- file.path(path, "src")
   if (!dir.exists(src_path)) dir.create(src_path)
-  rmd_name <- paste0(stringr::str_pad(number, 2, pad = 0), "-references.Rmd")
+  rmd_name <- paste0(sprintf("%02d", number), "-references.Rmd")
 
   # Add header and generate packages.bib
   header <- "`r if (knitr::is_html_output()) '# References {-}'`"

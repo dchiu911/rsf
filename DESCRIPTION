@@ -19,7 +19,6 @@ Imports:
     bookdown,
     magrittr,
     rlang,
-    stringr,
     usethis,
     yaml,
     ymlthis (>= 0.1.0)
