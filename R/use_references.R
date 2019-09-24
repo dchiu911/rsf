@@ -24,26 +24,40 @@ use_references <- function(path = ".", number = 99) {
     stop("One or more input files are missing.")
   }
 
-  # Check if references already exists
-  if (ymlthis::has_field(yaml::read_yaml(index_rmd_path), "bibliography")) {
-    usethis::ui_done("References already added")
-    return(invisible())
-  }
-
-  # Create references Rmd source file
+  # Specify references Rmd file path
   src_path <- file.path(path, "src")
-  if (!dir.exists(src_path)) dir.create(src_path)
   rmd_name <- paste0(sprintf("%02d", number), "-references.Rmd")
   ref_rmd_path <- file.path(src_path, rmd_name)
 
-  # Add header and generate packages.bib
-  header <- "`r if (knitr::is_html_output()) '# References {-}'`"
-  chunk <- ymlthis::code_chunk(
-    chunk_code = knitr::write_bib(c(.packages(), "bookdown"), "packages.bib"),
-    chunk_args = list(include = FALSE)
-  )
-  writeLines(text = c(header, "", chunk), con = ref_rmd_path)
-  usethis::ui_done(paste("Writing", usethis::ui_path(ref_rmd_path)))
+  if (file.exists(ref_rmd_path)) {
+    # Do nothing if references Rmd already added
+    usethis::ui_done(paste("Already added", usethis::ui_path(ref_rmd_path)))
+    return(invisible())
+  } else {
+    # Rename file if it exists
+    old_ref_rmd_path <-
+      list.files(src_path, "^[0-9]{2}-references\\.Rmd", full.names = TRUE)
+    if (length(old_ref_rmd_path) == 1) {
+      file.rename(old_ref_rmd_path, ref_rmd_path)
+      usethis::ui_done(paste(
+        "Renaming",
+        usethis::ui_path(old_ref_rmd_path),
+        "to",
+        usethis::ui_path(ref_rmd_path)
+      ))
+      return(invisible())
+    } else {
+      # Write header and generate packages.bib otherwise
+      header <- "`r if (knitr::is_html_output()) '# References {-}'`"
+      chunk <- ymlthis::code_chunk(
+        chunk_code = knitr::write_bib(c(.packages(), "bookdown"), "packages.bib"),
+        chunk_args = list(include = FALSE)
+      )
+      if (!dir.exists(src_path)) dir.create(src_path)
+      writeLines(text = c(header, "", chunk), con = ref_rmd_path)
+      usethis::ui_done(paste("Writing", usethis::ui_path(ref_rmd_path)))
+    }
+  }
 
   # Call packages.bib from index.Rmd
   index_rmd <- readLines(index_rmd_path)
