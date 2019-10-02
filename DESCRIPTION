@@ -22,9 +22,7 @@ Imports:
     rlang,
     usethis,
     yaml,
-    ymlthis (>= 0.1.0)
-Remotes: 
-    r-lib/ymlthis
+    ymlthis
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
