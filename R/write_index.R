@@ -1,19 +1,22 @@
-# index.Rmd
+#' Write `index.Rmd`
+#' @noRd
 write_index <- function(path) {
-  index_yml <- list(
-    title = paste(basename(path), "Report of Statistical Findings", sep = ": "),
-    author = whoami::fullname(fallback = "Author"),
-    date = "`r Sys.Date()`",
-    site = "bookdown::bookdown_site",
-    documentclass = "report",
-    geometry = "margin=1in",
-    `biblio-style` = "apalike",
-    `link-citations` = TRUE,
-    colorlinks = TRUE,
-    lot = TRUE,
-    lof = TRUE
-  )
-  index_yml <- gsub("\n$", "", yaml::as.yaml(index_yml))
-  writeLines(text = c("---", index_yml, "---\n\n# Preface {-}"),
-             con = file.path(path, "index.Rmd"))
+  index_yml <- ymlthis::yml_empty() %>%
+    ymlthis::yml_title(paste(basename(path),
+                             "Report of Statistical Findings", sep = ": ")) %>%
+    ymlthis::yml() %>%
+    ymlthis::yml_bookdown_site() %>%
+    ymlthis::yml_latex_opts(
+      documentclass = "report",
+      geometry = "margin=1in",
+      colorlinks = TRUE,
+      lof = TRUE,
+      lot = TRUE,
+      biblio_style = "apalike"
+    ) %>%
+    ymlthis::yml_citations(link_citations = TRUE)
+  writeLines(
+    text = c(utils::capture.output(print(index_yml)), "\n# Preface {-}"),
+    con = file.path(path, "index.Rmd")
+  )  # TODO: use_rmarkdown() forces index.Rmd to open, use_index_rmd doesn't pass body param
 }

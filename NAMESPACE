@@ -3,3 +3,4 @@
 export(git_ignore_outputs)
 export(use_references)
 export(use_rsf)
+importFrom(magrittr,"%>%")

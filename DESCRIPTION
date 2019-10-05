@@ -1,7 +1,7 @@
 Type: Package
 Package: rsf
 Title: Report of Statistical Findings in 'bookdown'
-Version: 0.1.0.9001
+Version: 0.2.0
 Authors@R: 
     person(given = "Derek",
            family = "Chiu",
@@ -17,10 +17,12 @@ URL: https://github.com/dchiu911/rsf,
 BugReports: https://github.com/dchiu911/rsf/issues
 Imports: 
     bookdown,
-    stringr,
+    knitr,
+    magrittr,
+    rlang,
     usethis,
-    whoami,
-    yaml
+    yaml,
+    ymlthis
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

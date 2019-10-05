@@ -20,4 +20,5 @@ use_rsf <- function(path, ...) {
   write_index(path)
   write_src(path)
   write_preamble(path)
+  write_gitignore(path)
 }

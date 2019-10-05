@@ -1,15 +1,17 @@
-# _bookdown.yml
+#' Write `_bookdown.yml`
+#' @noRd
 write_bookdown_yml <- function(path, params) {
-  bookdown_yml <- c(
-    list(
-      book_filename = paste(basename(path), "RSF", sep = "_"),
-      rmd_subdir = "src",
-      before_chapter_script = "src/utils.R"
-    ),
-    params
+  bookdown_yml <- rlang::exec(
+    ymlthis::yml_bookdown_opts,
+    .yml = ymlthis::yml_empty(),
+    book_filename = paste(basename(path), "RSF", sep = "_"),
+    before_chapter_script = "src/utils.R",
+    rmd_subdir = "src",
+    !!!params
   )
-  yaml::write_yaml(
-    x = bookdown_yml,
-    file = file.path(path, "_bookdown.yml")
-  )
+  # TODO: quiet arg not passed
+  tmp <- utils::capture.output(ymlthis::use_bookdown_yml(bookdown_yml, path, quiet = TRUE))
+  # TODO: extra final line return
+  tmp_path <- gsub(".*'(.*)'.*", "\\1", tmp)
+  writeLines(utils::head(readLines(tmp_path), -1), tmp_path)
 }

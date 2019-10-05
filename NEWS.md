@@ -1,4 +1,8 @@
-# rsf 0.1.0.9001
+# rsf 0.2.0
+
+## API changes
+
+* Use the `ymlthis` package for writing YAML
 
 ## LaTeX changes
 
