@@ -14,8 +14,11 @@ write_index <- function(path) {
       lot = TRUE
     ) %>%
     ymlthis::yml_citations(biblio_style = "apalike", link_citations = TRUE)
-  writeLines(
-    text = c(utils::capture.output(print(index_yml)), "\n# Preface {-}"),
-    con = file.path(path, "index.Rmd")
-  )  # TODO: use_rmarkdown() forces index.Rmd to open, use_index_rmd doesn't pass body param
+  ymlthis::use_index_rmd(
+    .yml = index_yml,
+    path = path,
+    body = "\n# Preface {-}",
+    quiet = TRUE,
+    open_doc = FALSE
+  )
 }
