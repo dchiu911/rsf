@@ -8,7 +8,7 @@ git_ignore_outputs(path = ".", figs_only = TRUE)
 }
 \arguments{
 \item{path}{path of the directory containing the input files \code{.gitignore} and
-\code{_bookdown.yml}.}
+\verb{_bookdown.yml}.}
 
 \item{figs_only}{logical; if \code{TRUE} (default), only figures are git ignored.}
 }
