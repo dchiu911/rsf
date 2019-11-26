@@ -1,5 +1,8 @@
 # rsf (development version)
 
+* Update `write_index()` after changes to `yml_citations()` and `use_index_rmd()` in `ymlthis` package
+* Use `options(ymlthis.remove_blank_line = TRUE)` to remove trailing blank line in YAML files
+
 # rsf 0.2.0
 
 ## API changes
