@@ -5,7 +5,8 @@ write_output_yml <- function(path) {
     .yml = ymlthis::yml_empty(),
     bookdown::gitbook(
       lib_dir = "assets",
-      split_by = "chapter+number"
+      split_by = "chapter",
+      config = list(download = "pdf")
     ),
     bookdown::pdf_book(
       keep_tex = TRUE,
