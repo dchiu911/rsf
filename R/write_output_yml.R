@@ -15,4 +15,5 @@ write_output_yml <- function(path) {
   )
   options(ymlthis.remove_blank_line = TRUE)
   ymlthis::use_output_yml(.yml = output_yml, path = path, quiet = TRUE)
+  options(ymlthis.remove_blank_line = FALSE)
 }

@@ -11,4 +11,5 @@ write_bookdown_yml <- function(path, params) {
   )
   options(ymlthis.remove_blank_line = TRUE)
   ymlthis::use_bookdown_yml(.yml = bookdown_yml, path = path, quiet = TRUE)
+  options(ymlthis.remove_blank_line = FALSE)
 }
