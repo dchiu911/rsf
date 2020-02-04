@@ -1,7 +1,7 @@
 Type: Package
 Package: rsf
 Title: Report of Statistical Findings in 'bookdown'
-Version: 0.2.0.9000
+Version: 0.2.1
 Authors@R: 
     person(given = "Derek",
            family = "Chiu",
@@ -26,4 +26,4 @@ Imports:
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2

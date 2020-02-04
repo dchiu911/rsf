@@ -9,7 +9,7 @@ use_rsf(path, ...)
 \arguments{
 \item{path}{project path}
 
-\item{...}{additional configurations for \code{_bookdown.yml} as described in
+\item{...}{additional configurations for \verb{_bookdown.yml} as described in
 \url{https://bookdown.org/yihui/bookdown/configuration.html}. Currently, only
 \code{output_dir} is supported.}
 }

@@ -6,5 +6,5 @@ OpenFiles: _bookdown.yml, _output.yml, index.Rmd
 Parameter: output_dir
 Widget: TextInput
 Label: Output Directory
-Default: reports
+Default: docs
 Position: left

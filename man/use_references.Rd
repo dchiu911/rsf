@@ -8,7 +8,7 @@ use_references(path = ".", number = 99)
 }
 \arguments{
 \item{path}{path of the directory containing the input files \code{index.Rmd},
-\code{_output.yml}, \code{preamble.tex}.}
+\verb{_output.yml}, \code{preamble.tex}.}
 
 \item{number}{number prepended to references Rmd source file.}
 }
