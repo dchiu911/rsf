@@ -1,4 +1,4 @@
-# rsf (development version)
+# rsf 0.2.1
 
 * Change `output_dir` to `docs` to work nicely with GitHub Pages
 * Change `gitbook` defaults: `split_by = "chapter"` to simplify HTML links, add button to download PDF output
