@@ -14,7 +14,10 @@ status](https://www.r-pkg.org/badges/version/rsf)](https://CRAN.R-project.org/pa
 <!-- badges: end -->
 
 The goal of rsf is to provide an RStudio project template for a Report
-of Statistical Findings (RSF) using the `bookdown` format.
+of Statistical Findings (RSF) using the `bookdown` format. An RSF as a
+project report, with typical sections Introduction, Method, and Results.
+Some parts of an RSF often become the main or supplementary materials of
+a manuscript.
 
 ## Installation
 
