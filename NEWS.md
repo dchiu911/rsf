@@ -1,4 +1,4 @@
-# rsf (development version)
+# rsf 0.2.2
 
 * Always hold figure position with figure captions
 * Remove latex fix for bookdown and titlesec incompatibility bug after update to bookdown (rstudio/bookdown#677)
