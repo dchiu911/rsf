@@ -15,7 +15,8 @@ write_utils <- function(path) {
   message = FALSE,
   warning = FALSE,
   results = "asis",
-  fig.align = "center"
+  fig.align = "center",
+  fig.pos = "H"
 )'
   writeLines(text = c("# knitr options", chunk_opts),
              con = file.path(path, "utils.R"))

@@ -1,7 +1,7 @@
 # preamble.tex
 write_preamble <- function(path) {
   cmds <-
-    "\\usepackage{titlesec, blindtext, color}
+    "\\usepackage{titlesec, blindtext, color, float}
 
 \\titleformat{\\chapter}[display]
   {\\Huge\\bfseries}
