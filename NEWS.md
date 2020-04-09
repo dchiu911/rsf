@@ -1,3 +1,5 @@
+# rsf (development version)
+
 # rsf 0.2.1
 
 * Change `output_dir` to `docs` to work nicely with GitHub Pages
