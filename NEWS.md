@@ -1,5 +1,8 @@
 # rsf (development version)
 
+* Always hold figure position with figure captions
+* Remove latex fix for bookdown and titlesec incompatibility bug after update to bookdown (rstudio/bookdown#677)
+
 # rsf 0.2.1
 
 * Change `output_dir` to `docs` to work nicely with GitHub Pages
