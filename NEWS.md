@@ -1,3 +1,5 @@
+# rsf (development version)
+
 # rsf 0.2.2
 
 * Always hold figure position with figure captions
