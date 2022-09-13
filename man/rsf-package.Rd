@@ -6,10 +6,7 @@
 \alias{rsf-package}
 \title{rsf: Report of Statistical Findings in 'bookdown'}
 \description{
-A report of statistical findings (RSF) project
-    template is generated using a 'bookdown' format. 'YAML' fields can be
-    further customized. Additional helper functions provide extra features
-    to the RSF.
+A report of statistical findings (RSF) project template is generated using a 'bookdown' format. 'YAML' fields can be further customized. Additional helper functions provide extra features to the RSF.
 }
 \seealso{
 Useful links:
