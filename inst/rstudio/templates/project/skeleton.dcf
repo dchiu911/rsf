@@ -8,3 +8,15 @@ Widget: TextInput
 Label: Output Directory
 Default: docs
 Position: left
+
+Parameter: git
+Widget: CheckboxInput
+Label: Create a git repository
+Default: true
+Position: bottom
+
+Parameter: renv
+Widget: CheckboxInput
+Label: Use renv with this project
+Default: true
+Position: bottom

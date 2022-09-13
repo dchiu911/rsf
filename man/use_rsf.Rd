@@ -9,9 +9,12 @@ use_rsf(path, ...)
 \arguments{
 \item{path}{project path}
 
-\item{...}{additional configurations for \verb{_bookdown.yml} as described in
-\url{https://bookdown.org/yihui/bookdown/configuration.html}. Currently, only
-\code{output_dir} is supported.}
+\item{...}{project configurations supported:
+\itemize{
+\item \code{output_dir} in \verb{_bookdown.yml} \url{https://bookdown.org/yihui/bookdown/configuration.html}
+\item initialize git repo via \code{\link[gert:git_repo]{gert::git_init()}}
+\item initialize renv via \code{\link[renv:init]{renv::init()}}
+}}
 }
 \description{
 Opens a new R project using the RSF template. Intended for use in RStudio,
