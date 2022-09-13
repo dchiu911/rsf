@@ -3,7 +3,7 @@ url: https://dchiu911.github.io/rsf/
 template:
   bootstrap: 5
   params:
-    bootswatch: cerulean
+    bootswatch: united
 
 navbar:
   title: ~
