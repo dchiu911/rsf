@@ -3,17 +3,13 @@ Package: rsf
 Title: Report of Statistical Findings in 'bookdown'
 Version: 0.2.2.9000
 Authors@R: 
-    person(given = "Derek",
-           family = "Chiu",
-           role = c("aut", "cre"),
-           email = "dchiu@bccrc.ca")
-Description: A report of statistical findings (RSF) project
-    template is generated using a 'bookdown' format. 'YAML' fields can be
-    further customized. Additional helper functions provide extra features
-    to the RSF.
+    person("Derek", "Chiu", , "dchiu@bccrc.ca", role = c("aut", "cre"))
+Description: A report of statistical findings (RSF) project template is
+    generated using a 'bookdown' format. 'YAML' fields can be further
+    customized. Additional helper functions provide extra features to the
+    RSF.
 License: MIT + file LICENSE
-URL: https://github.com/dchiu911/rsf,
-    https://dchiu911.github.io/rsf
+URL: https://github.com/dchiu911/rsf, https://dchiu911.github.io/rsf
 BugReports: https://github.com/dchiu911/rsf/issues
 Imports: 
     bookdown,
