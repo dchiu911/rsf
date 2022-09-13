@@ -1,6 +1,6 @@
 ## Test environments
-* local macOS install, R 3.5.3
-* ubuntu 16.04 (on travis-ci), R-devel, R 3.6.1
+* local macOS install, R 4.2.1
+* ubuntu 20.04 (on GitHub Actions), R 4.2.1, devel
 * win-builder (devel)
 
 ## R CMD check results
