@@ -5,10 +5,7 @@
 
 <!-- badges: start -->
 
-[![Travis build
-status](https://travis-ci.org/dchiu911/rsf.svg?branch=master)](https://travis-ci.org/dchiu911/rsf)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/dchiu911/rsf?branch=master&svg=true)](https://ci.appveyor.com/project/dchiu911/rsf)
+[![R-CMD-check](https://github.com/dchiu911/rsf/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dchiu911/rsf/actions/workflows/R-CMD-check.yaml)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/rsf)](https://CRAN.R-project.org/package=rsf)
 <!-- badges: end -->
