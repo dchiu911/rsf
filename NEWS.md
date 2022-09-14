@@ -1,4 +1,4 @@
-# rsf (development version)
+# rsf 0.3.0
 
 * Use GitHub Actions for CI and pkgdown site
 * Add project options to initialize with git repository and/or renv private library

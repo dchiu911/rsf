@@ -1,7 +1,7 @@
 Type: Package
 Package: rsf
 Title: Report of Statistical Findings in 'bookdown'
-Version: 0.2.2.9000
+Version: 0.3.0
 Authors@R: 
     person("Derek", "Chiu", , "dchiu@bccrc.ca", role = c("aut", "cre"))
 Description: A report of statistical findings (RSF) project template is
