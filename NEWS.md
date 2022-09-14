@@ -3,6 +3,7 @@
 * Use GitHub Actions for CI and pkgdown site
 * Add project options to initialize with git repository and/or renv private library
 * Add conditions in `use_references()` to skip modifications if they already exist
+* Add setup script and call from each Rmd
 
 # rsf 0.2.2
 
