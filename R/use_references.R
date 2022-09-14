@@ -51,8 +51,8 @@ use_references <- function(path = ".", number = 99) {
         chunk_args = list(include = FALSE)
       )
       if (!dir.exists(src_path)) dir.create(src_path)
-      writeLines(text = c(header, "", chunk), con = ref_rmd_path)
-      usethis::ui_done(paste("Adding", usethis::ui_path(ref_rmd_path)))
+      writeLines(text = c(header, "", chunk), con = ref_path)
+      usethis::ui_done(paste("Adding", usethis::ui_path(ref_path)))
     }
   }
 
