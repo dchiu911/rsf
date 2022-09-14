@@ -2,17 +2,19 @@ url: https://dchiu911.github.io/rsf/
 
 template:
   bootstrap: 5
-  params:
-    bootswatch: united
+  bslib:
+    primary: "#0054AD"
 
-navbar:
-  title: ~
-  type: default
-  left:
-  - text: Reference
-    href: reference/index.html
-  - text: News
-    href: news/index.html
-  right:
-  - icon: fa-github
-    href: https://github.com/dchiu911/rsf
+development:
+  mode: auto
+
+news:
+  releases:
+  - text: "Version 0.2.2"
+    href: https://dchiu911.github.io/rsf/news/index.htmll#rsf-022
+  - text: "Version 0.2.1"
+    href: https://dchiu911.github.io/rsf/news/index.htmll#rsf-021
+  - text: "Version 0.2.0"
+    href: https://dchiu911.github.io/rsf/news/index.htmll#rsf-020
+  - text: "Version 0.1.0"
+    href: https://dchiu911.github.io/rsf/news/index.htmll#rsf-010
