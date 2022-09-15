@@ -9,7 +9,7 @@ Description: A report of statistical findings (RSF) project template is
     customized. Additional helper functions provide extra features to the
     RSF.
 License: MIT + file LICENSE
-URL: https://github.com/dchiu911/rsf, https://dchiu911.github.io/rsf
+URL: https://github.com/dchiu911/rsf/, https://dchiu911.github.io/rsf/
 BugReports: https://github.com/dchiu911/rsf/issues
 Imports: 
     bookdown,
