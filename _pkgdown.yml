@@ -3,10 +3,7 @@ url: https://dchiu911.github.io/rsf/
 template:
   bootstrap: 5
   bslib:
-    primary: "#0054AD"
-
-development:
-  mode: auto
+    primary: "#306cc9"
 
 news:
   releases:
