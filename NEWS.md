@@ -1,3 +1,8 @@
+# rsf 1.0.0
+
+* Migrate RSF infrastructure from bookdown to Quarto books
+* Update package logo
+
 # rsf 0.3.0
 
 * Use GitHub Actions for CI and pkgdown site
