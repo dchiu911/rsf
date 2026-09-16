@@ -1,6 +1,6 @@
 Binding: use_rsf
 Title: Report of Statistical Findings using Quarto
-Icon: rsf-logo.png
+Icon: logo.png
 OpenFiles: _quarto.yml, index.qmd
 
 Parameter: git
