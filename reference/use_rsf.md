@@ -31,3 +31,12 @@ This function is called when the user selects File \> New Project \> New
 Directory \> Report of Statistical Findings using Quarto. The directory
 name can be specified, and the user can choose to initialize the project
 as a git repository and/or use with `renv`.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+# Don't run interactively. Use RStudio Create Project menu.
+use_rsf(path = ".")
+} # }
+```
