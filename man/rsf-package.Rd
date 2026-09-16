@@ -6,6 +6,8 @@
 \alias{rsf-package}
 \title{rsf: Report of Statistical Findings in Quarto}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 A report of statistical findings (RSF) project template is generated using a Quarto book.
 }
 \seealso{

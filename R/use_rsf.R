@@ -12,6 +12,11 @@
 #' @param ... project configurations supported:
 #' * initialize git repo via [gert::git_init()]
 #' * initialize renv via [renv::init()]
+#' @examples
+#' \dontrun{
+#' # Don't run interactively. Use RStudio Create Project menu.
+#' use_rsf(path = ".")
+#' }
 #' @export
 use_rsf <- function(path, ...) {
   dir.create(path, recursive = TRUE, showWarnings = FALSE)
