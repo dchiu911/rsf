@@ -4,9 +4,9 @@
 \name{rsf-package}
 \alias{rsf}
 \alias{rsf-package}
-\title{rsf: Report of Statistical Findings in 'bookdown'}
+\title{rsf: Report of Statistical Findings in Quarto}
 \description{
-A report of statistical findings (RSF) project template is generated using a 'bookdown' format. 'YAML' fields can be further customized. Additional helper functions provide extra features to the RSF.
+A report of statistical findings (RSF) project template is generated using a Quarto book.
 }
 \seealso{
 Useful links:
@@ -19,6 +19,11 @@ Useful links:
 }
 \author{
 \strong{Maintainer}: Derek Chiu \email{dchiu@bccrc.ca}
+
+Authors:
+\itemize{
+  \item Derek Chiu \email{dchiu@bccrc.ca}
+}
 
 }
 \keyword{internal}

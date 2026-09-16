@@ -1,4 +1,0 @@
-book_filename: RSF
-before_chapter_script: src/utils.R
-rmd_subdir: src
-output_dir: docs

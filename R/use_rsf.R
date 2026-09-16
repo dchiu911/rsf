@@ -1,27 +1,34 @@
 #' Use RSF project template
 #'
-#' Opens a new R project using the RSF template. Intended for use in RStudio,
-#' not interactively.
+#' Create a new Quarto book R project using the RSF template. Intended for use
+#' in RStudio menu, not interactively.
 #'
 #' This function is called when the user selects File > New Project > New
-#' Directory > Report of Statistical Findings using bookdown. The directory name
-#' and output directory can be specified.
+#' Directory > Report of Statistical Findings using Quarto. The directory name
+#' can be specified, and the user can choose to initialize the project as
+#' a git repository and/or use with `renv`.
 #'
 #' @param path project path
 #' @param ... project configurations supported:
-#' * `output_dir` in `_bookdown.yml` <https://bookdown.org/yihui/bookdown/configuration.html>
 #' * initialize git repo via [gert::git_init()]
 #' * initialize renv via [renv::init()]
 #' @export
 use_rsf <- function(path, ...) {
   dir.create(path, recursive = TRUE, showWarnings = FALSE)
+  dir.create(file.path(path, "rsf"), recursive = TRUE, showWarnings = FALSE)
+  extdata_dir <- system.file("extdata", package = "rsf")
+  file.copy(
+    from = list.files(
+      extdata_dir,
+      all.files = TRUE,
+      full.names = TRUE,
+      recursive = TRUE
+    ),
+    to = file.path(path, list.files(
+      extdata_dir, all.files = TRUE, recursive = TRUE
+    ))
+  )
   params <- list(...)
-  write_bookdown_yml(path, params$output_dir)
-  write_output_yml(path)
-  write_index(path)
-  write_src(path)
-  write_preamble(path)
-  write_gitignore(path)
   if (params$git) gert::git_init(path)
   if (params$renv) renv::init(path, restart = FALSE)
 }

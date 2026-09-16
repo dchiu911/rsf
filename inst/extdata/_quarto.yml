@@ -1,0 +1,50 @@
+project:
+  type: book
+
+book:
+  title: "Report of Statistical Findings"
+  output-file: "RSF"
+  author:
+    - name: Derek Chiu
+  description: "This book is a report of statistical findings."
+  date: today
+  date-format: long
+  chapters:
+    - index.qmd
+    - rsf/methods.qmd
+    - rsf/results.qmd
+    - rsf/references.qmd
+  downloads: pdf
+  reader-mode: true
+
+crossref:
+  chapters: true
+
+format:
+  html:
+    theme:
+      - cosmo
+  pdf:
+    documentclass: scrreprt
+    geometry: margin=1in
+    colorlinks: true
+    lof: true
+    lot: true
+    biblio-style: apalike
+    link-citations: true
+    keep-tex: true
+    fig-pos: H
+    fig-align: center
+    include-in-header:
+      text: |
+        \addtokomafont{disposition}{\rmfamily}
+        \usepackage{float}
+        \floatplacement{table}{H}
+
+execute:
+  echo: false
+  message: false
+  warning: false
+  freeze: auto
+
+editor: visual

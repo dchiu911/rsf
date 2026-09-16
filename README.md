@@ -10,11 +10,11 @@
 status](https://www.r-pkg.org/badges/version/rsf)](https://CRAN.R-project.org/package=rsf)
 <!-- badges: end -->
 
-The goal of rsf is to provide an RStudio project template for a Report
-of Statistical Findings (RSF) using the `bookdown` format. An RSF as a
-project report, with typical sections Introduction, Method, and Results.
-Some parts of an RSF often become the main or supplementary materials of
-a manuscript.
+The goal of rsf is to provide an RStudio project template based on a
+Quarto book format for a Report of Statistical Findings (RSF). An RSF as
+a project report, with typical sections Introduction, Method, and
+Results. Some parts of an RSF often become the main or supplementary
+materials of a manuscript.
 
 ## Installation
 
@@ -36,4 +36,4 @@ remotes::install_github("dchiu911/rsf")
 
 After installation, you can choose the rsf project template by accessing
 the RStudio menus: File \> New Project \> New Directory \> Report of
-Statistical Findings using bookdown.
+Statistical Findings using Quarto.

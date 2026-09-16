@@ -11,17 +11,17 @@ use_rsf(path, ...)
 
 \item{...}{project configurations supported:
 \itemize{
-\item \code{output_dir} in \verb{_bookdown.yml} \url{https://bookdown.org/yihui/bookdown/configuration.html}
-\item initialize git repo via \code{\link[gert:git_repo]{gert::git_init()}}
+\item initialize git repo via \code{\link[gert:git_init]{gert::git_init()}}
 \item initialize renv via \code{\link[renv:init]{renv::init()}}
 }}
 }
 \description{
-Opens a new R project using the RSF template. Intended for use in RStudio,
-not interactively.
+Create a new Quarto book R project using the RSF template. Intended for use
+in RStudio menu, not interactively.
 }
 \details{
 This function is called when the user selects File > New Project > New
-Directory > Report of Statistical Findings using bookdown. The directory name
-and output directory can be specified.
+Directory > Report of Statistical Findings using Quarto. The directory name
+can be specified, and the user can choose to initialize the project as
+a git repository and/or use with \code{renv}.
 }

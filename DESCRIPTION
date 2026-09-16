@@ -1,27 +1,17 @@
 Type: Package
 Package: rsf
-Title: Report of Statistical Findings in 'bookdown'
+Title: Report of Statistical Findings in Quarto
 Version: 0.3.0
 Authors@R: 
     person("Derek", "Chiu", , "dchiu@bccrc.ca", role = c("aut", "cre"))
 Description: A report of statistical findings (RSF) project template is
-    generated using a 'bookdown' format. 'YAML' fields can be further
-    customized. Additional helper functions provide extra features to the
-    RSF.
+    generated using a Quarto book.
 License: MIT + file LICENSE
 URL: https://github.com/dchiu911/rsf/, https://dchiu911.github.io/rsf/
 BugReports: https://github.com/dchiu911/rsf/issues
 Imports: 
-    bookdown,
     gert,
-    here,
-    knitr,
-    magrittr,
-    renv,
-    rlang,
-    usethis,
-    yaml,
-    ymlthis
+    renv
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.1
+Config/roxygen2/version: 8.1.0
