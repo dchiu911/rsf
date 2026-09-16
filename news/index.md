@@ -1,5 +1,10 @@
 # Changelog
 
+## rsf 1.0.0
+
+- Migrate RSF infrastructure from bookdown to Quarto books
+- Update package logo
+
 ## rsf 0.3.0
 
 CRAN release: 2022-09-15

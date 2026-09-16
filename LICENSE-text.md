@@ -1,4 +1,4 @@
 # License
 
-    YEAR: 2019
-    COPYRIGHT HOLDER: Derek Chiu
+    YEAR: 2026
+    COPYRIGHT HOLDER: rsf authors
