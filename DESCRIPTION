@@ -1,7 +1,7 @@
 Type: Package
 Package: rsf
 Title: Report of Statistical Findings in Quarto
-Version: 1.0.0.9000
+Version: 1.0.0
 Authors@R: 
     person("Derek", "Chiu", , "dchiu@bccrc.ca", role = c("aut", "cre"))
 Description: A report of statistical findings (RSF) project template is
