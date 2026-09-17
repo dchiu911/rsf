@@ -2,6 +2,8 @@
 
 ## rsf 1.0.0
 
+CRAN release: 2026-09-16
+
 - Migrate RSF infrastructure from bookdown to Quarto books
 - Update package logo
 
