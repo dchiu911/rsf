@@ -1,3 +1,5 @@
+# rsf (development version)
+
 # rsf 1.0.0
 
 * Migrate RSF infrastructure from bookdown to Quarto books
