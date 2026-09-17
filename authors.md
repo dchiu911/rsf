@@ -7,7 +7,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/dchiu911/rsf/blob/v1.0.0/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/dchiu911/rsf/blob/master/DESCRIPTION)
 
 Chiu D (2026). *rsf: Report of Statistical Findings in Quarto*. R
 package version 1.0.0, <https://github.com/dchiu911/rsf/>.

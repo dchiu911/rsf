@@ -1,5 +1,7 @@
 # Changelog
 
+## rsf (development version)
+
 ## rsf 1.0.0
 
 CRAN release: 2026-09-16
