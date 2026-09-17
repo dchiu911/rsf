@@ -7,11 +7,12 @@ template:
 
 news:
   releases:
-  - text: "Version 0.2.2"
-    href: https://dchiu911.github.io/rsf/news/index.htmll#rsf-022
-  - text: "Version 0.2.1"
-    href: https://dchiu911.github.io/rsf/news/index.htmll#rsf-021
+
+  - text: "Version 1.0.0"
+    href: https://dchiu911.github.io/rsf/news/index.html#rsf-100
+  - text: "Version 0.3.0"
+    href: https://dchiu911.github.io/rsf/news/index.html#rsf-030
   - text: "Version 0.2.0"
-    href: https://dchiu911.github.io/rsf/news/index.htmll#rsf-020
+    href: https://dchiu911.github.io/rsf/news/index.html#rsf-020
   - text: "Version 0.1.0"
-    href: https://dchiu911.github.io/rsf/news/index.htmll#rsf-010
+    href: https://dchiu911.github.io/rsf/news/index.html#rsf-010
